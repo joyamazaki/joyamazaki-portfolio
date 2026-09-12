@@ -3,8 +3,10 @@ const mobileMenu = document.querySelector('.mobile-menu');
 const mobileLinks = mobileMenu.querySelectorAll('a');
 
 function setMenu(open) {
+  const openLabel = menuButton.dataset.labelOpen || 'Open menu';
+  const closeLabel = menuButton.dataset.labelClose || 'Close menu';
   menuButton.setAttribute('aria-expanded', String(open));
-  menuButton.setAttribute('aria-label', open ? 'メニューを閉じる' : 'メニューを開く');
+  menuButton.setAttribute('aria-label', open ? closeLabel : openLabel);
   mobileMenu.setAttribute('aria-hidden', String(!open));
   document.body.classList.toggle('menu-open', open);
 

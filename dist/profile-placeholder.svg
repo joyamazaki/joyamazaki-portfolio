@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="1500" viewBox="0 0 1200 1500" role="img" aria-labelledby="title desc">
+  <title id="title">Profile image placeholder</title>
+  <desc id="desc">Temporary abstract image to be replaced with a portrait.</desc>
+  <rect width="1200" height="1500" fill="#cfcfcf"/>
+  <rect x="96" y="96" width="1008" height="1308" fill="none" stroke="#111111" stroke-width="3"/>
+  <path d="M96 1120 770 96h334L430 1404H96Z" fill="#111111"/>
+  <circle cx="865" cy="1045" r="168" fill="#e6e6e6"/>
+</svg>
