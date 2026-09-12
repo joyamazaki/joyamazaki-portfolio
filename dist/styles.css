@@ -150,6 +150,43 @@ a {
   height: auto;
 }
 
+.info-section {
+  display: grid;
+  width: min(100%, 1800px);
+  margin: 0 auto;
+  padding: 104px 48px 128px;
+  border-top: 1px solid rgba(17, 17, 17, 0.28);
+  grid-template-columns: minmax(180px, 0.34fr) minmax(0, 1fr);
+  scroll-margin-top: var(--header-height);
+}
+
+.info-section h2,
+.info-section p {
+  margin: 0;
+}
+
+.info-section h2 {
+  font-size: clamp(2rem, 4vw, 4.5rem);
+  font-weight: 400;
+  letter-spacing: -0.045em;
+  line-height: 0.95;
+}
+
+.info-copy {
+  max-width: 760px;
+  font-size: clamp(1.35rem, 2.25vw, 2.75rem);
+  letter-spacing: -0.025em;
+  line-height: 1.16;
+}
+
+.info-copy p + p {
+  margin-top: 1em;
+}
+
+.contact-section {
+  min-height: 64vh;
+}
+
 .visually-hidden {
   position: absolute;
   width: 1px;
@@ -185,30 +222,30 @@ a {
     position: relative;
     z-index: 22;
     display: grid;
-    width: 44px;
-    height: 44px;
-    padding: 11px 4px;
+    width: 36px;
+    height: 36px;
+    padding: 9px 4px;
     border: 0;
     background: transparent;
     cursor: pointer;
     place-content: center;
-    gap: 8px;
+    gap: 6px;
   }
 
   .menu-button span {
     display: block;
-    width: 31px;
-    height: 1.5px;
+    width: 24px;
+    height: 1.25px;
     background: var(--ink);
     transition: transform 220ms ease;
   }
 
   .menu-button[aria-expanded="true"] span:first-child {
-    transform: translateY(4.75px) rotate(45deg);
+    transform: translateY(3.625px) rotate(45deg);
   }
 
   .menu-button[aria-expanded="true"] span:last-child {
-    transform: translateY(-4.75px) rotate(-45deg);
+    transform: translateY(-3.625px) rotate(-45deg);
   }
 
   .mobile-menu {
@@ -217,7 +254,7 @@ a {
     inset: 0;
     display: grid;
     visibility: hidden;
-    padding: calc(var(--header-height) + 44px) 16px 36px;
+    padding: calc(var(--header-height) + 28px) 16px 36px;
     background: var(--background);
     opacity: 0;
     transition: opacity 180ms ease, visibility 180ms ease;
@@ -232,19 +269,38 @@ a {
     display: flex;
     align-items: flex-start;
     flex-direction: column;
-    gap: 18px;
+    gap: 14px;
   }
 
   .mobile-menu a {
-    font-size: clamp(2.8rem, 15vw, 4.6rem);
+    font-size: clamp(1.8rem, 8vw, 2.35rem);
     font-weight: 400;
-    letter-spacing: -0.055em;
-    line-height: 0.96;
+    letter-spacing: -0.035em;
+    line-height: 1;
   }
 
   .works {
     padding: calc(var(--header-height) + 24px) 16px 64px;
     gap: 40px;
+  }
+
+  .info-section {
+    display: block;
+    padding: 64px 16px 88px;
+  }
+
+  .info-section h2 {
+    margin-bottom: 52px;
+    font-size: 2rem;
+  }
+
+  .info-copy {
+    font-size: 1.25rem;
+    line-height: 1.22;
+  }
+
+  .contact-section {
+    min-height: 70vh;
   }
 }
 
