@@ -1,9 +1,45 @@
+@font-face {
+  font-family: "Portfolio Sans";
+  src: url("./fonts/Jinter-Regular.otf") format("opentype");
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  unicode-range: U+0000-024F, U+1E00-1EFF;
+}
+
+@font-face {
+  font-family: "Portfolio Sans";
+  src: url("./fonts/Jinter-SemiBold.otf") format("opentype");
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  unicode-range: U+0000-024F, U+1E00-1EFF;
+}
+
+@font-face {
+  font-family: "Portfolio Sans";
+  src: url("./fonts/AotoGothic-Medium.otf") format("opentype");
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  unicode-range: U+3000-30FF, U+31F0-31FF, U+3400-4DBF, U+4E00-9FFF, U+F900-FAFF, U+FF00-FFEF;
+}
+
+@font-face {
+  font-family: "Portfolio Sans";
+  src: url("./fonts/AotoGothic-Bold.otf") format("opentype");
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  unicode-range: U+3000-30FF, U+31F0-31FF, U+3400-4DBF, U+4E00-9FFF, U+F900-FAFF, U+FF00-FFEF;
+}
+
 :root {
   color-scheme: light;
   --background: #e6e6e6;
   --ink: #111111;
   --header-height: 104px;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Portfolio Sans", Arial, "Hiragino Kaku Gothic ProN", sans-serif;
 }
 
 * {
@@ -201,7 +237,7 @@ a {
 
   .mobile-menu a {
     font-size: clamp(2.8rem, 15vw, 4.6rem);
-    font-weight: 500;
+    font-weight: 400;
     letter-spacing: -0.055em;
     line-height: 0.96;
   }
