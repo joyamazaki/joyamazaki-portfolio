@@ -18,7 +18,7 @@
 
 @font-face {
   font-family: "Portfolio Sans";
-  src: url("./fonts/AotoGothic-Medium.otf") format("opentype");
+  src: url("./fonts/AP-OTF-AotoGothicStdN-Medium.otf") format("opentype");
   font-style: normal;
   font-weight: 400;
   font-display: swap;
@@ -27,7 +27,7 @@
 
 @font-face {
   font-family: "Portfolio Sans";
-  src: url("./fonts/AotoGothic-Bold.otf") format("opentype");
+  src: url("./fonts/AP-OTF-AotoGothicStdN-Bold.otf") format("opentype");
   font-style: normal;
   font-weight: 600;
   font-display: swap;
