@@ -29,12 +29,13 @@
   color-scheme: light;
   --background: #e6e6e6;
   --ink: #111111;
-  --type-language: 0.875rem;
+  --muted: #9e9e9e;
   --type-body: 1rem;
   --type-heading: 2rem;
   --header-height: 104px;
   --stroke: 2px;
   --print-duration: 720ms;
+  --print-line-fade-duration: 840ms;
   font-family: "Portfolio Sans", Arial, "Hiragino Kaku Gothic ProN", sans-serif;
 }
 
@@ -148,21 +149,20 @@ a {
 }
 
 .language-switch a {
-  font-size: var(--type-language);
+  color: var(--ink);
+  font-size: 0.875rem;
   font-weight: 600;
   line-height: 1;
   text-decoration: none;
-  text-underline-offset: 3px;
+  transition: color 180ms ease;
 }
 
-.language-switch a:hover,
-.language-switch a:focus-visible,
-.language-switch a.is-active {
-  text-decoration: underline;
+.language-switch a:not(.is-active) {
+  color: var(--muted);
 }
 
 .language-switch span {
-  font-size: var(--type-language);
+  font-size: 0.875rem;
   font-weight: 600;
 }
 
@@ -281,9 +281,9 @@ a {
 .contact-email {
   display: block;
   width: fit-content;
-  margin: 24px auto 0;
+  margin: 48px auto 0;
   max-width: 100%;
-  font-size: 1.35rem;
+  font-size: var(--type-heading);
   font-weight: 400;
   letter-spacing: 0;
   line-height: 1.5;
@@ -326,7 +326,7 @@ a {
 .js .profile-image.is-visible::after {
   animation:
     print-line-position var(--print-duration) cubic-bezier(0.22, 0.75, 0.32, 1) var(--reveal-delay, 0ms) both,
-    print-line-opacity var(--print-duration) linear var(--reveal-delay, 0ms) both;
+    print-line-opacity var(--print-line-fade-duration) ease-in-out var(--reveal-delay, 0ms) both;
 }
 
 .page-title,
@@ -375,7 +375,7 @@ a {
 @keyframes print-line-opacity {
   0% { opacity: 0; }
   1% { opacity: 1; }
-  97% { opacity: 1; }
+  85.714% { opacity: 1; }
   100% { opacity: 0; }
 }
 
@@ -436,7 +436,7 @@ a {
   }
 
   .language-switch a {
-    font-size: var(--type-language);
+    font-size: 0.875rem;
   }
 
   .menu-button {
