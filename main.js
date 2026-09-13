@@ -1,6 +1,28 @@
+document.documentElement.classList.add('js');
+
 const menuButton = document.querySelector('.menu-button');
 const mobileMenu = document.querySelector('.mobile-menu');
 const mobileLinks = mobileMenu.querySelectorAll('a');
+const printElements = document.querySelectorAll('.work-card, .profile-image');
+
+if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+  printElements.forEach((element) => element.classList.add('is-visible'));
+} else {
+  const revealObserver = new IntersectionObserver((entries, observer) => {
+    entries.forEach((entry) => {
+      if (!entry.isIntersecting) return;
+      entry.target.classList.add('is-visible');
+      observer.unobserve(entry.target);
+    });
+  }, { threshold: 0.08, rootMargin: '0px 0px -8% 0px' });
+
+  printElements.forEach((element, index) => {
+    const startsOnScreen = element.getBoundingClientRect().top < window.innerHeight;
+    const delay = startsOnScreen ? 760 + (index * 110) : Math.min(index, 2) * 80;
+    element.style.setProperty('--reveal-delay', `${delay}ms`);
+    revealObserver.observe(element);
+  });
+}
 
 function setMenu(open) {
   const openLabel = menuButton.dataset.labelOpen || 'Open menu';
