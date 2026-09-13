@@ -525,6 +525,11 @@ a {
     margin-bottom: 32px;
   }
 
+  .contact-email {
+    font-size: clamp(1.25rem, 6.4vw, 1.5rem);
+    white-space: nowrap;
+  }
+
   .profile-layout {
     display: block;
   }
