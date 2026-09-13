@@ -9,6 +9,8 @@ const mobileMenu = document.querySelector('.mobile-menu');
 const mobileLinks = mobileMenu.querySelectorAll('a');
 const printElements = document.querySelectorAll('.work-card, .profile-image');
 
+document.querySelector('.site-header').append(mobileMenu);
+
 if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
   printElements.forEach((element) => element.classList.add('is-visible'));
 } else {
