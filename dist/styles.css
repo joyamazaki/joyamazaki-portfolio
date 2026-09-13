@@ -471,15 +471,15 @@ a {
     transition: transform 220ms ease;
   }
 
-  .menu-button span:first-child { top: 12px; }
-  .menu-button span:last-child { top: 22px; }
+  .menu-button span:first-child { top: 14px; }
+  .menu-button span:last-child { top: 21px; }
 
   .menu-button[aria-expanded="true"] span:first-child {
-    transform: translateY(5px) rotate(45deg);
+    transform: translateY(3.5px) rotate(45deg);
   }
 
   .menu-button[aria-expanded="true"] span:last-child {
-    transform: translateY(-5px) rotate(-45deg);
+    transform: translateY(-3.5px) rotate(-45deg);
   }
 
   body.menu-open .brand,
