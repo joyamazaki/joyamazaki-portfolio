@@ -9,6 +9,15 @@
 
 @font-face {
   font-family: "Portfolio Sans";
+  src: url("./fonts/Jinter-SemiBold.otf") format("opentype");
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  unicode-range: U+0000-024F, U+1E00-1EFF, U+2000-206F;
+}
+
+@font-face {
+  font-family: "Portfolio Sans";
   src: url("./fonts/AP-OTF-AotoGothicStdN-Medium.otf") format("opentype");
   font-style: normal;
   font-weight: 400;
@@ -24,7 +33,7 @@
   --type-body: 1rem;
   --type-heading: 2rem;
   --header-height: 104px;
-  --stroke: 1.5px;
+  --stroke: 2px;
   --print-duration: 720ms;
   font-family: "Portfolio Sans", Arial, "Hiragino Kaku Gothic ProN", sans-serif;
 }
@@ -140,7 +149,7 @@ a {
 
 .language-switch a {
   font-size: var(--type-language);
-  font-weight: 400;
+  font-weight: 600;
   line-height: 1;
   text-decoration: none;
   text-underline-offset: 3px;
@@ -154,7 +163,7 @@ a {
 
 .language-switch span {
   font-size: var(--type-language);
-  font-weight: 400;
+  font-weight: 600;
 }
 
 .menu-button,
@@ -447,6 +456,8 @@ a {
 
   .menu-button span {
     display: block;
+    box-sizing: border-box;
+    flex: 0 0 var(--stroke);
     width: 24px;
     height: var(--stroke);
     background: var(--ink);
@@ -454,11 +465,11 @@ a {
   }
 
   .menu-button[aria-expanded="true"] span:first-child {
-    transform: translateY(3.75px) rotate(45deg);
+    transform: translateY(4px) rotate(45deg);
   }
 
   .menu-button[aria-expanded="true"] span:last-child {
-    transform: translateY(-3.75px) rotate(-45deg);
+    transform: translateY(-4px) rotate(-45deg);
   }
 
   .mobile-menu {
