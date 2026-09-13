@@ -1,5 +1,9 @@
 document.documentElement.classList.add('js');
 
+document.querySelectorAll('.site-footer').forEach((footer) => {
+  footer.textContent = `© ${new Date().getFullYear()} jo yamazaki`;
+});
+
 const menuButton = document.querySelector('.menu-button');
 const mobileMenu = document.querySelector('.mobile-menu');
 const mobileLinks = mobileMenu.querySelectorAll('a');
