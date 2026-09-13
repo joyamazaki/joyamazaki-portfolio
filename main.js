@@ -14,19 +14,61 @@ document.querySelector('.site-header').append(mobileMenu);
 if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
   printElements.forEach((element) => element.classList.add('is-visible'));
 } else {
+  const readyToPrint = new Set();
+  let nextPrintIndex = 0;
+  let printInProgress = false;
+  let sequenceStarted = false;
+
+  function revealNextPrint() {
+    if (printInProgress || nextPrintIndex >= printElements.length) return;
+
+    const nextElement = printElements[nextPrintIndex];
+    if (!readyToPrint.has(nextElement)) return;
+
+    printInProgress = true;
+    nextElement.style.setProperty('--reveal-delay', '0ms');
+    nextElement.classList.add('is-visible');
+    revealObserver.unobserve(nextElement);
+
+    window.setTimeout(() => {
+      nextPrintIndex += 1;
+      printInProgress = false;
+      revealNextPrint();
+    }, 760);
+  }
+
+  function beginPrintSequence() {
+    if (sequenceStarted) {
+      revealNextPrint();
+      return;
+    }
+
+    sequenceStarted = true;
+    window.setTimeout(revealNextPrint, 760);
+  }
+
   const revealObserver = new IntersectionObserver((entries, observer) => {
     entries.forEach((entry) => {
       if (!entry.isIntersecting) return;
-      entry.target.classList.add('is-visible');
-      observer.unobserve(entry.target);
+      readyToPrint.add(entry.target);
     });
+
+    beginPrintSequence();
   }, { threshold: 0.08, rootMargin: '0px 0px -8% 0px' });
 
-  printElements.forEach((element, index) => {
-    const startsOnScreen = element.getBoundingClientRect().top < window.innerHeight;
-    const delay = startsOnScreen ? 760 + (index * 110) : Math.min(index, 2) * 80;
-    element.style.setProperty('--reveal-delay', `${delay}ms`);
-    revealObserver.observe(element);
+  window.requestAnimationFrame(() => {
+    while (nextPrintIndex < printElements.length) {
+      const previousElement = printElements[nextPrintIndex];
+      if (previousElement.getBoundingClientRect().top >= 0) break;
+
+      previousElement.style.setProperty('--reveal-delay', '-840ms');
+      previousElement.classList.add('is-visible');
+      nextPrintIndex += 1;
+    }
+
+    Array.from(printElements)
+      .slice(nextPrintIndex)
+      .forEach((element) => revealObserver.observe(element));
   });
 }
 

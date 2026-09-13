@@ -33,7 +33,7 @@
   --type-body: 1rem;
   --type-heading: 1.5rem;
   --header-height: 104px;
-  --stroke: 2px;
+  --stroke: 1.5px;
   --print-duration: 720ms;
   --print-line-fade-duration: 840ms;
   font-family: "Portfolio Sans", Arial, "Hiragino Kaku Gothic ProN", sans-serif;
@@ -137,7 +137,7 @@ a {
   right: 0;
   bottom: -7px;
   left: 0;
-  height: 1px;
+  height: var(--stroke);
   background: currentColor;
   content: "";
   transform: scaleX(0);
