@@ -33,7 +33,7 @@
   --type-body: 1rem;
   --type-heading: 1.5rem;
   --header-height: 104px;
-  --stroke: 1.5px;
+  --stroke: 1.4px;
   --print-duration: 720ms;
   --print-line-fade-duration: 840ms;
   font-family: "Portfolio Sans", Arial, "Hiragino Kaku Gothic ProN", sans-serif;
@@ -471,15 +471,15 @@ a {
     transition: transform 220ms ease;
   }
 
-  .menu-button span:first-child { top: 14px; }
-  .menu-button span:last-child { top: 21px; }
+  .menu-button span:first-child { top: 13.5px; }
+  .menu-button span:last-child { top: 21.5px; }
 
   .menu-button[aria-expanded="true"] span:first-child {
-    transform: translateY(3.5px) rotate(45deg);
+    transform: translateY(4px) rotate(45deg);
   }
 
   .menu-button[aria-expanded="true"] span:last-child {
-    transform: translateY(-3.5px) rotate(-45deg);
+    transform: translateY(-4px) rotate(-45deg);
   }
 
   body.menu-open .brand,
