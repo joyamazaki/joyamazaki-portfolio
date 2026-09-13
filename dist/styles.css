@@ -55,6 +55,16 @@ body {
   overflow-x: hidden;
 }
 
+.site-footer {
+  width: 100%;
+  margin: 0;
+  padding: 0 16px 20px;
+  color: var(--muted);
+  font-size: 0.75rem;
+  line-height: 1;
+  text-align: center;
+}
+
 body.menu-open {
   overflow: hidden;
 }
