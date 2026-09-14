@@ -3,36 +3,8 @@ import * as pdfjsLib from './vendor/pdfjs/pdf.mjs';
 pdfjsLib.GlobalWorkerOptions.workerSrc = new URL('./vendor/pdfjs/pdf.worker.mjs', import.meta.url).href;
 
 const viewer = document.querySelector('[data-pdf-document]');
-const nativeViewer = document.querySelector('[data-native-pdf]');
-const headerTrigger = document.querySelector('.portfolio-header-trigger');
-const siteHeader = document.querySelector('.site-header');
 
-if (viewer && nativeViewer) {
-  nativeViewer.src = nativeViewer.dataset.pdfSrc;
-  nativeViewer.hidden = false;
-  viewer.hidden = true;
-  viewer.setAttribute('aria-busy', 'false');
-
-  let collapseTimer;
-  const setHeaderCollapsed = (collapsed) => {
-    window.clearTimeout(collapseTimer);
-    document.body.classList.toggle('portfolio-header-collapsed', collapsed);
-    headerTrigger?.setAttribute('aria-expanded', String(!collapsed));
-  };
-  const scheduleCollapse = (delay = 360) => {
-    window.clearTimeout(collapseTimer);
-    collapseTimer = window.setTimeout(() => setHeaderCollapsed(true), delay);
-  };
-
-  headerTrigger?.addEventListener('mouseenter', () => setHeaderCollapsed(false));
-  headerTrigger?.addEventListener('click', () => {
-    setHeaderCollapsed(!document.body.classList.contains('portfolio-header-collapsed'));
-  });
-  siteHeader?.addEventListener('mouseenter', () => window.clearTimeout(collapseTimer));
-  siteHeader?.addEventListener('mouseleave', () => scheduleCollapse());
-  nativeViewer.addEventListener('load', () => scheduleCollapse(900), { once: true });
-  scheduleCollapse(1800);
-} else if (viewer) {
+if (viewer) {
   const resourceRoot = new URL('./vendor/pdfjs/', import.meta.url);
   const pdfUrl = new URL(viewer.dataset.pdfDocument, document.baseURI).href;
   const loadingText = viewer.querySelector('.portfolio-status');
