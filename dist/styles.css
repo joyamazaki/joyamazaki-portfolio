@@ -97,6 +97,11 @@ button:focus:not(:focus-visible) {
   background: var(--background);
 }
 
+/* The portfolio is read as a continuous document: the header scrolls away with it. */
+.portfolio-route .site-header {
+  position: absolute;
+}
+
 .brand {
   display: inline-flex;
   width: 176px;
@@ -132,6 +137,7 @@ button:focus:not(:focus-visible) {
 .desktop-nav a:nth-child(1) { animation-delay: 280ms; }
 .desktop-nav a:nth-child(2) { animation-delay: 350ms; }
 .desktop-nav a:nth-child(3) { animation-delay: 420ms; }
+.desktop-nav a:nth-child(4) { animation-delay: 490ms; }
 
 .desktop-nav a,
 .mobile-menu a {
@@ -192,12 +198,17 @@ button:focus:not(:focus-visible) {
 }
 
 .works {
-  display: flex;
+  display: grid;
   width: min(100%, 1800px);
   margin: 0 auto;
   padding: var(--header-height) 48px 96px;
-  flex-direction: column;
-  gap: 72px;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 72px clamp(40px, 4vw, 72px);
+  align-items: start;
+}
+
+.work-card:nth-child(even) {
+  margin-top: clamp(96px, 12vw, 220px);
 }
 
 .work-card {
@@ -223,6 +234,46 @@ button:focus:not(:focus-visible) {
   width: min(100%, 1800px);
   margin: 0 auto;
   padding: calc(var(--header-height) + 56px) 48px 112px;
+}
+
+.portfolio-page {
+  width: 100%;
+  margin: 0;
+  min-height: 100vh;
+  padding: var(--header-height) 0 96px;
+}
+
+.portfolio-pages {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  gap: 72px;
+}
+
+.portfolio-status,
+.pdf-fallback {
+  margin: 0;
+  font-size: var(--type-body);
+  line-height: 1.5;
+}
+
+.pdf-fallback {
+  padding: 16px 0;
+}
+
+.pdf-page {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  background: #ffffff;
+}
+
+.pdf-page canvas {
+  position: absolute;
+  inset: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
 }
 
 .about-page {
@@ -530,7 +581,21 @@ button:focus:not(:focus-visible) {
   }
 
   .works {
+    display: flex;
     padding: var(--header-height) 16px 64px;
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .work-card:nth-child(even) {
+    margin-top: 0;
+  }
+
+  .portfolio-page {
+    padding: var(--header-height) 0 64px;
+  }
+
+  .portfolio-pages {
     gap: 40px;
   }
 

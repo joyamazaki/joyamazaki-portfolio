@@ -15,6 +15,7 @@ if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
   printElements.forEach((element) => element.classList.add('is-visible'));
 } else {
   const readyToPrint = new Set();
+  const waitingForImage = new WeakSet();
   let nextPrintIndex = 0;
   let printInProgress = false;
   let sequenceStarted = false;
@@ -47,13 +48,30 @@ if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
     window.setTimeout(revealNextPrint, 760);
   }
 
+  function markReadyToPrint(element) {
+    if (readyToPrint.has(element) || waitingForImage.has(element)) return;
+
+    const image = element.querySelector('img');
+    const markReady = () => {
+      readyToPrint.add(element);
+      beginPrintSequence();
+    };
+
+    if (!image || image.complete) {
+      markReady();
+      return;
+    }
+
+    waitingForImage.add(element);
+    image.addEventListener('load', markReady, { once: true });
+    image.addEventListener('error', markReady, { once: true });
+  }
+
   const revealObserver = new IntersectionObserver((entries, observer) => {
     entries.forEach((entry) => {
       if (!entry.isIntersecting) return;
-      readyToPrint.add(entry.target);
+      markReadyToPrint(entry.target);
     });
-
-    beginPrintSequence();
   }, { threshold: 0.08, rootMargin: '0px 0px -8% 0px' });
 
   window.requestAnimationFrame(() => {
