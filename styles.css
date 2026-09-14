@@ -78,9 +78,12 @@ button {
   -webkit-tap-highlight-color: transparent;
 }
 
-a:focus:not(:focus-visible),
-button:focus:not(:focus-visible) {
-  outline: none;
+a:focus,
+button:focus,
+a:focus-visible,
+button:focus-visible {
+  outline: none !important;
+  box-shadow: none !important;
 }
 
 .site-header {
