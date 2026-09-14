@@ -29,6 +29,7 @@ if (viewer) {
       const canvas = document.createElement('canvas');
 
       pageElement.className = 'pdf-page';
+      pageElement.id = `page-${pageNumber}`;
       pageElement.style.aspectRatio = `${baseViewport.width} / ${baseViewport.height}`;
       pageElement.dataset.pageNumber = String(pageNumber);
       pageElement.setAttribute('aria-label', `Page ${pageNumber} of ${pdf.numPages}`);
@@ -40,6 +41,14 @@ if (viewer) {
     loadingText?.remove();
     pages.forEach(({ pageElement }) => viewer.append(pageElement));
     viewer.setAttribute('aria-busy', 'false');
+
+    const scrollToLinkedPage = () => {
+      const target = document.getElementById(window.location.hash.slice(1));
+      if (target) window.requestAnimationFrame(() => target.scrollIntoView({ block: 'start', behavior: 'instant' }));
+    };
+
+    scrollToLinkedPage();
+    window.addEventListener('hashchange', scrollToLinkedPage);
 
     const renderPage = async (entry) => {
       const { page, pageElement, canvas, baseViewport } = entry;

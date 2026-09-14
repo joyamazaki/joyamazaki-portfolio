@@ -218,6 +218,10 @@ button:focus:not(:focus-visible) {
   overflow: hidden;
 }
 
+.work-card-link {
+  display: block;
+}
+
 .work-card img {
   display: block;
   width: 100%;
@@ -245,10 +249,10 @@ button:focus:not(:focus-visible) {
 
 .portfolio-pages {
   display: flex;
-  width: 100%;
-  padding-inline: clamp(12px, 2vw, 24px);
+  width: min(72vw, calc(141.421vh - 181px), 1240px);
+  margin: 0 auto;
   flex-direction: column;
-  gap: 72px;
+  gap: 0;
 }
 
 .portfolio-status,
@@ -266,7 +270,12 @@ button:focus:not(:focus-visible) {
   position: relative;
   width: 100%;
   overflow: hidden;
-  background: #ffffff;
+  background: transparent;
+  line-height: 0;
+}
+
+.pdf-page + .pdf-page {
+  margin-top: -1px;
 }
 
 .pdf-page canvas {
@@ -597,7 +606,8 @@ button:focus:not(:focus-visible) {
   }
 
   .portfolio-pages {
-    gap: 40px;
+    width: 100%;
+    margin: 0;
   }
 
   .page-main {
