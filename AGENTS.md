@@ -46,7 +46,7 @@
 ### about
 
 - プロフィール画像は `profile.jpg` を使用する。
-- 英語・日本語ページとも、プロフィール名は `Jo Yamazaki` とする。
+- 英語ページのプロフィール名は `Jo Yamazaki`、日本語ページは `山﨑 丈` とする。
 - 日本語の経歴は次の内容を維持する。
   - `2005年 東京都生まれ`
   - `2027年 武蔵野美術大学 工芸工業デザイン学科 卒業予定`
@@ -55,6 +55,7 @@
   - `2027 Expected to graduate from Musashino Art University, Department of Industrial, Interior and Craft Design`
 - アシックス入社予定の記述は、日本語・英語ともに追加しない。
 - 年の列と本文を近く保ち、本文の折り返しが年の列に重ならないようにする。
+- 日本語の2027年の経歴は、スマホ表示のみ `武蔵野美術大学` の後で改行する。
 
 ### contact
 
