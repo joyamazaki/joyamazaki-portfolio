@@ -1,7 +1,7 @@
 document.documentElement.classList.add('js');
 
 document.querySelectorAll('.site-footer').forEach((footer) => {
-  footer.textContent = `© ${new Date().getFullYear()} jo yamazaki`;
+  footer.textContent = '© 2026 joyamazaki';
 });
 
 const menuButton = document.querySelector('.menu-button');
