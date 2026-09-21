@@ -322,6 +322,12 @@ button:focus-visible {
   line-height: 1.15;
 }
 
+.name-kern {
+  display: inline-block;
+  margin-right: 0.04em;
+  letter-spacing: -0.04em;
+}
+
 .profile-layout {
   display: grid;
   align-items: start;
