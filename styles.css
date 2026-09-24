@@ -305,7 +305,10 @@ button:focus-visible {
 }
 
 .about-page {
+  min-height: calc(100vh - 32px);
+  min-height: calc(100svh - 32px);
   padding-top: var(--header-height);
+  padding-bottom: 12px;
 }
 
 .page-title,
@@ -388,7 +391,8 @@ button:focus-visible {
 }
 
 .contact-page {
-  min-height: 100vh;
+  min-height: calc(100vh - 32px);
+  min-height: calc(100svh - 32px);
   text-align: center;
 }
 
@@ -658,6 +662,7 @@ button:focus-visible {
 
   .about-page {
     padding-top: var(--header-height);
+    padding-bottom: 24px;
   }
 
   .page-title {
