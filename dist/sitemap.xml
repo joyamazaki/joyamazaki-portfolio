@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://joyamazaki.com/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://joyamazaki.com/" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://joyamazaki.com/jp/" />
+  </url>
+  <url>
+    <loc>https://joyamazaki.com/jp/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://joyamazaki.com/" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://joyamazaki.com/jp/" />
+  </url>
+  <url>
+    <loc>https://joyamazaki.com/about/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://joyamazaki.com/about/" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://joyamazaki.com/jp/about/" />
+  </url>
+  <url>
+    <loc>https://joyamazaki.com/jp/about/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://joyamazaki.com/about/" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://joyamazaki.com/jp/about/" />
+  </url>
+  <url>
+    <loc>https://joyamazaki.com/contact/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://joyamazaki.com/contact/" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://joyamazaki.com/jp/contact/" />
+  </url>
+  <url>
+    <loc>https://joyamazaki.com/jp/contact/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://joyamazaki.com/contact/" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://joyamazaki.com/jp/contact/" />
+  </url>
+  <url>
+    <loc>https://joyamazaki.com/portfolio/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://joyamazaki.com/portfolio/" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://joyamazaki.com/jp/portfolio/" />
+  </url>
+  <url>
+    <loc>https://joyamazaki.com/jp/portfolio/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://joyamazaki.com/portfolio/" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://joyamazaki.com/jp/portfolio/" />
+  </url>
+</urlset>
