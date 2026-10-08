@@ -656,6 +656,10 @@ button:focus-visible {
     margin: 0;
   }
 
+  .portfolio-status {
+    margin-left: 16px;
+  }
+
   .page-main {
     padding: calc(var(--header-height) + 16px) 16px 72px;
   }
