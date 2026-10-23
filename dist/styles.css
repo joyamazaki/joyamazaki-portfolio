@@ -459,7 +459,7 @@ button:focus-visible {
   animation: text-wipe 680ms cubic-bezier(0.76, 0, 0.24, 1) both;
 }
 
-.contact-email { animation-delay: 620ms; }
+.contact-email { animation-delay: 300ms; }
 
 @keyframes roll-in-left {
   from { opacity: 0; transform: translateX(-90px) rotate(-14deg); }
