@@ -451,10 +451,6 @@ button:focus-visible {
     print-line-opacity var(--print-line-fade-duration) ease-in-out var(--reveal-delay, 0ms) both;
 }
 
-.about-page .profile-copy {
-  animation: text-wipe 680ms cubic-bezier(0.76, 0, 0.24, 1) 1580ms both;
-}
-
 .contact-email {
   animation: text-wipe 680ms cubic-bezier(0.76, 0, 0.24, 1) both;
 }
