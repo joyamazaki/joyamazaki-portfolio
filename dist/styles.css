@@ -452,7 +452,7 @@ button:focus-visible {
 }
 
 .about-page .profile-copy {
-  animation: text-wipe 680ms cubic-bezier(0.76, 0, 0.24, 1) 0ms both;
+  animation: text-wipe 680ms cubic-bezier(0.76, 0, 0.24, 1) 300ms both;
 }
 
 .contact-email {
