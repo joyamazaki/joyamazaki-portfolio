@@ -2,6 +2,10 @@
 
 このリポジトリは、Jo Yamazaki のポートフォリオサイトです。既存のデザイン、アニメーション、日英ページ、GitHub Pages向け公開構成を維持しながら編集してください。
 
+## 現在の検索運用方針
+
+検索設定の監査結果・運用手順は `docs/search-policy.md` を参照する。名前検索の入口は `https://joyamazaki.com/` とし、トップのタイトルは `joyamazaki`、文章スニペットは非表示、作品画像のプレビューは許可する。about/contactのnoindexを維持し、検索対象ページに統一する旧URLは転送とcanonicalで揃える。検索順位・Googleのタイトル・画像の枚数は保証しない。古い日英切り替え・portfolio・プロフィール写真などの記述は、現在の実装やユーザーの最新指示に戻して適用しない。
+
 ## 基本方針
 
 - 人名は `Jo Yamazaki`、ブランド名は `joyamazaki` とし、`Joy Amazaki` などに変更しない。
