@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://joyamazaki.com/</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://joyamazaki.com/" />
@@ -32,13 +31,43 @@
     <xhtml:link rel="alternate" hreflang="ja" href="https://joyamazaki.com/jp/contact/" />
   </url>
   <url>
-    <loc>https://joyamazaki.com/portfolio/</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://joyamazaki.com/portfolio/" />
-    <xhtml:link rel="alternate" hreflang="ja" href="https://joyamazaki.com/jp/portfolio/" />
+    <loc>https://joyamazaki.com/works/archx/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://joyamazaki.com/works/archx/" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://joyamazaki.com/jp/works/archx/" />
   </url>
   <url>
-    <loc>https://joyamazaki.com/jp/portfolio/</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://joyamazaki.com/portfolio/" />
-    <xhtml:link rel="alternate" hreflang="ja" href="https://joyamazaki.com/jp/portfolio/" />
+    <loc>https://joyamazaki.com/jp/works/archx/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://joyamazaki.com/works/archx/" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://joyamazaki.com/jp/works/archx/" />
+  </url>
+  <url>
+    <loc>https://joyamazaki.com/works/percentz/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://joyamazaki.com/works/percentz/" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://joyamazaki.com/jp/works/percentz/" />
+  </url>
+  <url>
+    <loc>https://joyamazaki.com/jp/works/percentz/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://joyamazaki.com/works/percentz/" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://joyamazaki.com/jp/works/percentz/" />
+  </url>
+  <url>
+    <loc>https://joyamazaki.com/works/hwk/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://joyamazaki.com/works/hwk/" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://joyamazaki.com/jp/works/hwk/" />
+  </url>
+  <url>
+    <loc>https://joyamazaki.com/jp/works/hwk/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://joyamazaki.com/works/hwk/" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://joyamazaki.com/jp/works/hwk/" />
+  </url>
+  <url>
+    <loc>https://joyamazaki.com/works/belulu/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://joyamazaki.com/works/belulu/" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://joyamazaki.com/jp/works/belulu/" />
+  </url>
+  <url>
+    <loc>https://joyamazaki.com/jp/works/belulu/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://joyamazaki.com/works/belulu/" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://joyamazaki.com/jp/works/belulu/" />
   </url>
 </urlset>
