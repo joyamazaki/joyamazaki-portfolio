@@ -182,8 +182,8 @@ button:focus-visible {
 
 .language-switch {
   gap: 7px;
+  margin-top: 24px;
   white-space: nowrap;
-  animation: roll-in-top 760ms cubic-bezier(0.16, 1, 0.3, 1) 160ms both;
 }
 
 .language-switch a {
@@ -552,8 +552,6 @@ button:focus-visible {
   }
 
   .language-switch {
-    position: relative;
-    z-index: 20;
     gap: 5px;
   }
 
