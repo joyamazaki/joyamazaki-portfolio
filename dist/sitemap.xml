@@ -35,26 +35,6 @@
     </image:image>
   </url>
   <url>
-    <loc>https://joyamazaki.com/about/</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://joyamazaki.com/about/" />
-    <xhtml:link rel="alternate" hreflang="ja" href="https://joyamazaki.com/jp/about/" />
-  </url>
-  <url>
-    <loc>https://joyamazaki.com/jp/about/</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://joyamazaki.com/about/" />
-    <xhtml:link rel="alternate" hreflang="ja" href="https://joyamazaki.com/jp/about/" />
-  </url>
-  <url>
-    <loc>https://joyamazaki.com/contact/</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://joyamazaki.com/contact/" />
-    <xhtml:link rel="alternate" hreflang="ja" href="https://joyamazaki.com/jp/contact/" />
-  </url>
-  <url>
-    <loc>https://joyamazaki.com/jp/contact/</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://joyamazaki.com/contact/" />
-    <xhtml:link rel="alternate" hreflang="ja" href="https://joyamazaki.com/jp/contact/" />
-  </url>
-  <url>
     <loc>https://joyamazaki.com/works/archx/</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://joyamazaki.com/works/archx/" />
     <xhtml:link rel="alternate" hreflang="ja" href="https://joyamazaki.com/jp/works/archx/" />
