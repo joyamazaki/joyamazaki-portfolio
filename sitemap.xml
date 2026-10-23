@@ -1,14 +1,38 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://joyamazaki.com/</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://joyamazaki.com/" />
     <xhtml:link rel="alternate" hreflang="ja" href="https://joyamazaki.com/jp/" />
+    <image:image>
+      <image:loc>https://joyamazaki.com/works/graduation-01.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://joyamazaki.com/works/graduation-02.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://joyamazaki.com/works/graduation-03.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://joyamazaki.com/works/graduation-04.webp</image:loc>
+    </image:image>
   </url>
   <url>
     <loc>https://joyamazaki.com/jp/</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://joyamazaki.com/" />
     <xhtml:link rel="alternate" hreflang="ja" href="https://joyamazaki.com/jp/" />
+    <image:image>
+      <image:loc>https://joyamazaki.com/works/graduation-01.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://joyamazaki.com/works/graduation-02.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://joyamazaki.com/works/graduation-03.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://joyamazaki.com/works/graduation-04.webp</image:loc>
+    </image:image>
   </url>
   <url>
     <loc>https://joyamazaki.com/about/</loc>
