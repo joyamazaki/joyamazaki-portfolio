@@ -4,7 +4,7 @@
 
 ## 検索結果の希望
 - サイト名：joyamazaki。WebSite構造化データとog:site_nameで指定する。
-- タイトル：Jo Yamazaki。title、og:title、twitter:title、ページ構造化データでそろえる。
+- Safariなどのタブ名を戻す最新指示により、HTMLのtitleはjoyamazaki。og:title、twitter:title、ページ構造化データはJo Yamazakiを維持する。Google検索タイトルにもHTMLのtitleが使われるため、検索だけ別名になる保証はない。
 - 説明文：Designer 2023 - Musashino Art University Department of Industrial, Interior and Craft Design
 - 以前の文章スニペット非表示方針を撤回し、nosnippetを解除する。
 - 検索タイトル、説明文、サイト名、画像表示と順位の最終判断はGoogleに委ねられる。即時反映や指定どおりの表示を保証しない。
