@@ -412,14 +412,9 @@ button:focus-visible {
   line-height: 1.5;
   overflow-wrap: anywhere;
   text-decoration: none;
-  transition: letter-spacing 320ms ease, transform 320ms ease;
 }
 
-.contact-email:hover,
-.contact-email:focus-visible {
-  letter-spacing: 0.025em;
-  transform: translateY(-2px);
-}
+
 
 .js .work-card:not(.is-visible) img,
 .js .profile-image:not(.is-visible) img {
