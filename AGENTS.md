@@ -63,7 +63,7 @@
 
 ### contact
 
-- メールアドレスは `joyamazaki.b@gmail.com`。
+- contactは `joyamazaki.b(at)gmail.com` の文字表示のみ。mailtoリンクや実際のメールアドレスをHTML・JavaScript・構造化データなどの公開ファイルに記載しない。
 - モバイルでも不自然に改行しないサイズとレイアウトを維持する。
 
 ### portfolio
