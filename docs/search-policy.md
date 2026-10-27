@@ -38,3 +38,10 @@
 - 再生成：`python scripts/build-work-previews.py`（PyMuPDF、Pillowが必要）。元PDFを更新した際は画像も再生成する。
 - 検証：全26画像の画素が生成時のPDFラスタライズ結果と完全一致。元PDFがHEADと同一、ページ数・ID・canonical・構造化データ・distミラー・JavaScript構文・git diff --checkを確認。denoは環境にないためnode --checkで構文確認。ブラウザはローカルサーバーへ到達できず、ローカルChromiumの取得にも失敗したため実画面のPC/モバイル動作確認は未完了。
 - 公開反映後の確認手順：ARCHX/PERCENTZ/HWK/BELULUをURL検査し、公開URLテストの取得HTMLと表示を確認して登録を一度リクエストする。Google選択canonicalの再判定は保証しない。Search Consoleでの再申請は未実施。
+
+### 公開後の確認結果
+
+- 公開コミット：3b92ec818ad2888baa7260056f3af8d9b9fc1df8。4作品の公開HTMLで合計26ページの画像と各作品自身のcanonicalを確認。
+- 全26画像を公開URLから取得し、検証済みの可逆圧縮画像とバイト単位で一致。portfolio.js・styles.cssも公開版と一致。
+- 公開サイトのARCHXとPERCENTZで既存PDF.js描画が正常に動作することを確認。HWK・BELULUの作品名、ページ数、canonicalもブラウザで確認。モバイルの実画面確認は未実施。
+- Search Consoleへの再クロール申請とGoogle選択canonicalの再判定確認は未実施（ログインが必要）。
