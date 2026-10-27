@@ -292,6 +292,21 @@ button:focus-visible {
   margin-top: -1px;
 }
 
+.pdf-page .pdf-preview {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* Keep the lossless page visible until the original PDF renderer succeeds. */
+.pdf-page:not(.is-rendered) canvas {
+  visibility: hidden;
+}
+
+.pdf-page.is-rendered .pdf-preview {
+  visibility: hidden;
+}
+
 .pdf-page canvas {
   position: absolute;
   inset: 0;

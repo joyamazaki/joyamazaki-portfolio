@@ -28,3 +28,13 @@
 - https://developers.google.com/search/docs/appearance/title-link
 - https://developers.google.com/search/docs/appearance/snippet
 - https://developers.google.com/search/docs/crawling-indexing/ask-google-to-recrawl
+
+## 2026-10-27：作品ページの重複対策
+
+- ARCHX、PERCENTZ、HWK、BELULUに全26ページの静的imgを追加。幅4096pxのWebPを可逆圧縮で生成し、初期HTML・JavaScript無効時・PDF読込失敗時にも作品を表示する。
+- 既存PDF.jsは同じページ要素に重ねて描画する。元PDF、ページ順、DPR上限3、描画幅上限4096px、従来の余白を維持する。
+- 各作品の見出しとCreativeWork構造化データを作品固有にする。各画像の代替テキストは実際のPDFページ内テキストから生成する。HTMLのtitleと既存説明文は維持する。
+- 正規URLは各作品自身のURLのまま。旧jp転送、About/Contactの検索対象設定も維持する。
+- 再生成：`python scripts/build-work-previews.py`（PyMuPDF、Pillowが必要）。元PDFを更新した際は画像も再生成する。
+- 検証：全26画像の画素が生成時のPDFラスタライズ結果と完全一致。元PDFがHEADと同一、ページ数・ID・canonical・構造化データ・distミラー・JavaScript構文・git diff --checkを確認。denoは環境にないためnode --checkで構文確認。ブラウザはローカルサーバーへ到達できず、ローカルChromiumの取得にも失敗したため実画面のPC/モバイル動作確認は未完了。
+- 公開反映後の確認手順：ARCHX/PERCENTZ/HWK/BELULUをURL検査し、公開URLテストの取得HTMLと表示を確認して登録を一度リクエストする。Google選択canonicalの再判定は保証しない。Search Consoleでの再申請は未実施。

@@ -25,21 +25,27 @@ if (viewer) {
     for (let pageNumber = 1; pageNumber <= pdf.numPages; pageNumber += 1) {
       const page = await pdf.getPage(pageNumber);
       const baseViewport = page.getViewport({ scale: 1 });
-      const pageElement = document.createElement('section');
+      // Reuse the server-delivered image page so crawlers and no-JS visitors
+      // receive the same work, without duplicating page IDs or layout.
+      const pageElement = viewer.querySelector(`[data-page-number="${pageNumber}"]`) || document.createElement('section');
       const canvas = document.createElement('canvas');
 
-      pageElement.className = 'pdf-page';
+      pageElement.classList.add('pdf-page');
       pageElement.id = `page-${pageNumber}`;
       pageElement.style.aspectRatio = `${baseViewport.width} / ${baseViewport.height}`;
       pageElement.dataset.pageNumber = String(pageNumber);
-      pageElement.setAttribute('aria-label', `Page ${pageNumber} of ${pdf.numPages}`);
+      if (!pageElement.hasAttribute('aria-label')) {
+        pageElement.setAttribute('aria-label', `Page ${pageNumber} of ${pdf.numPages}`);
+      }
       canvas.setAttribute('aria-hidden', 'true');
       pageElement.append(canvas);
       pages.push({ page, pageElement, canvas, baseViewport, renderTask: null });
     }
 
     loadingText?.remove();
-    pages.forEach(({ pageElement }) => viewer.append(pageElement));
+    pages.forEach(({ pageElement }) => {
+      if (!pageElement.isConnected) viewer.append(pageElement);
+    });
     viewer.setAttribute('aria-busy', 'false');
 
     const scrollToLinkedPage = () => {
@@ -87,7 +93,10 @@ if (viewer) {
           pageEntry.pageElement.dataset.nearViewport = String(observerEntry.isIntersecting);
 
           if (observerEntry.isIntersecting) {
-            renderQueue = renderQueue.then(() => renderPage(pageEntry));
+            renderQueue = renderQueue.then(() => renderPage(pageEntry)).catch(() => {
+              // A failed PDF page keeps its lossless image; later pages still render.
+              pageEntry.pageElement.classList.remove('is-rendered');
+            });
             return;
           }
 
@@ -110,7 +119,10 @@ if (viewer) {
         pages
           .filter(({ pageElement }) => pageElement.dataset.nearViewport === 'true')
           .forEach((pageEntry) => {
-            renderQueue = renderQueue.then(() => renderPage(pageEntry));
+            renderQueue = renderQueue.then(() => renderPage(pageEntry)).catch(() => {
+              // A failed PDF page keeps its lossless image; later pages still render.
+              pageEntry.pageElement.classList.remove('is-rendered');
+            });
           });
       }, 180);
     });
