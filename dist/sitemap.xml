@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version='1.0' encoding='utf-8'?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://joyamazaki.com/</loc>
@@ -18,15 +18,97 @@
   </url>
   <url>
     <loc>https://joyamazaki.com/works/archx/</loc>
+    <lastmod>2026-10-29</lastmod>
+    <image:image>
+      <image:loc>https://joyamazaki.com/works/archx/pages/01.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://joyamazaki.com/works/archx/pages/02.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://joyamazaki.com/works/archx/pages/03.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://joyamazaki.com/works/archx/pages/04.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://joyamazaki.com/works/archx/pages/05.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://joyamazaki.com/works/archx/pages/06.webp</image:loc>
+    </image:image>
   </url>
   <url>
     <loc>https://joyamazaki.com/works/percentz/</loc>
+    <lastmod>2026-10-29</lastmod>
+    <image:image>
+      <image:loc>https://joyamazaki.com/works/percentz/pages/01.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://joyamazaki.com/works/percentz/pages/02.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://joyamazaki.com/works/percentz/pages/03.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://joyamazaki.com/works/percentz/pages/04.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://joyamazaki.com/works/percentz/pages/05.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://joyamazaki.com/works/percentz/pages/06.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://joyamazaki.com/works/percentz/pages/07.webp</image:loc>
+    </image:image>
   </url>
   <url>
     <loc>https://joyamazaki.com/works/hwk/</loc>
+    <lastmod>2026-10-29</lastmod>
+    <image:image>
+      <image:loc>https://joyamazaki.com/works/hwk/pages/01.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://joyamazaki.com/works/hwk/pages/02.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://joyamazaki.com/works/hwk/pages/03.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://joyamazaki.com/works/hwk/pages/04.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://joyamazaki.com/works/hwk/pages/05.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://joyamazaki.com/works/hwk/pages/06.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://joyamazaki.com/works/hwk/pages/07.webp</image:loc>
+    </image:image>
   </url>
   <url>
     <loc>https://joyamazaki.com/works/belulu/</loc>
+    <lastmod>2026-10-29</lastmod>
+    <image:image>
+      <image:loc>https://joyamazaki.com/works/belulu/pages/01.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://joyamazaki.com/works/belulu/pages/02.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://joyamazaki.com/works/belulu/pages/03.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://joyamazaki.com/works/belulu/pages/04.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://joyamazaki.com/works/belulu/pages/05.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://joyamazaki.com/works/belulu/pages/06.webp</image:loc>
+    </image:image>
   </url>
   <url>
     <loc>https://joyamazaki.com/about/</loc>
