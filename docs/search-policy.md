@@ -6,21 +6,20 @@
 - 名前検索の入口は https://joyamazaki.com/ 。トップは200応答と自己canonicalを維持。
 - サイト名、HTML title、og:title、twitter:titleはjoyamazaki。PersonのJo Yamazakiと日本語別表記は維持し、ロゴの代替テキストにも人名を明記する。
 - トップはindex, follow, nosnippet, max-image-preview:large。古い経歴を含む文章スニペットを抑制するためnosnippetを指定し、トップの説明文metaとCollectionPage.descriptionを削除。作品画像の設定を維持する。Google側の再クロール前には旧表示が残り得る。
-- about・contactはnoindex, follow, nosnippet。サイトマップにはトップと4作品のみを掲載。robots.txtでクロールを禁止せず、noindexを取得可能にする。公開ページの本文は維持する。
-- 旧jp URLは固定の対応する正規URLへhead内のlocation.replaceで即時転送し、クエリとハッシュを引き継ぐ。0秒meta refreshとcanonicalを代替手段として維持。通常は中継リンクを描画せず、JavaScript無効時だけnoscriptリンクを表示する。背景色はサイトと合わせる。about・contactに対応する旧URLもnoindexにする。
-- GitHub Pagesの静的HTML内でHTTP 301を設定することはできないため、旧jp転送はクライアント側のまま。サーバー側転送に変える場合はホスティング等の別対応が必要。
+- about・contactは最新指示によりindex, follow, max-image-preview:largeを維持。サイトマップにはトップ・about・contactと4作品の計7URLを掲載する。
+- 旧jp HTMLを編集元とdistから削除し、旧URLは404とする。転送は行わない。Googleの更新までは旧検索結果から404に到達する場合がある。旧URLはrobots.txtで遮断せず、クローラーが404を確認できるようにする。
 - 4作品の自己canonical・画像・PDF・本文・画質は維持する。全ての編集元HTMLとdistミラーを同期する。
 - 毎週木曜の自動確認は利用者の指示により解除済み。
 
 ## Search Consoleで残る確認
 1. トップとabout・contactをURL検査し、公開URLテストで最新のrobots設定を確認する。トップと変更対象を一度再クロール申請する。
-2. Google選択canonical、最終クロール、旧jp URLの集約を確認する。ARCHXがHWKへ重複判定されていた問題の解消は公開HTMLだけでは確認できない。
+2. Google選択canonical、最終クロール、旧jp URLの404確認・検索結果からの除外状況を確認する。ARCHXがHWKへ重複判定されていた問題の解消は公開HTMLだけでは確認できない。
 3. 山﨑丈・山崎丈・Jo Yamazaki・joyamazakiの表示回数と表示ページを確認する。公開検索の不検出だけでインデックス未登録とは断定しない。
-4. about・contactの一時削除申請は今回の非表示方針と整合する。トップを含む広いプレフィックスの削除申請がないか範囲を確認する。
+4. about・contactの一時削除申請が残っていれば、検索表示を許可する最新方針に合わせてキャンセルする。トップを含む広いプレフィックスの削除申請も範囲を確認する。
 5. 修正と検索結果への反映は別であり、順位、Googleのタイトル、画像枚数、更新日数は保証しない。この作業ではSearch Consoleの認証済み情報へアクセスしておらず、再クロール申請も未実施。
 
 ## 検証
-- HTML構文の読み取り、構造化データJSON、全正規ページのcanonical、robots、サイトマップ、旧URLの転送先・クエリとハッシュ保持、dist同期、JavaScript構文、git diff --checkを確認する。
+- HTML解析、構造化データJSON、全正規ページのcanonical、robots、サイトマップ7URL、旧jp HTMLの削除、残存内部リンク、dist同期、JavaScript構文、git diff --checkを確認する。
 - 公開後にHTTP応答と配信HTMLを確認する。Googleの検索結果更新とSearch Consoleの私有データは別途確認が必要。
 
 ## 公式資料

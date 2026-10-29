@@ -4,7 +4,7 @@
 
 ## 現在の検索運用方針
 
-検索設定の監査結果・運用手順は `docs/search-policy.md` を参照する。2026-10-29の最新指示を優先する。名前検索の入口は `https://joyamazaki.com/`、サイト名・HTML title・og:title・twitter:titleは `joyamazaki`。Personの名前と別表記は `Jo Yamazaki`、`山﨑丈`、`山崎丈` などを維持する。トップはindex, follow, nosnippet, max-image-preview:largeとし、紹介文のmeta description・構造化データdescriptionは置かない。about・contactはnoindex, follow, nosnippetとし、サイトマップから除外する。旧jp URLは固定の正規URLへhead内のlocation.replaceで直ちに転送し、0秒meta refreshを代替手段として維持する。通常の表示に中継リンクを出さず、JavaScript無効時のみnoscriptリンクを出す。作品画像・本文・画質は維持する。検索順位・Google側の更新時期・画像の枚数は保証しない。過去の経歴・プロフィール写真などの記述を現在の実装へ戻さない。
+検索設定の監査結果・運用手順は `docs/search-policy.md` を参照する。2026-10-29の最新指示を優先する。名前検索の入口は `https://joyamazaki.com/`、サイト名・HTML title・og:title・twitter:titleは `joyamazaki`。Personの名前と別表記は `Jo Yamazaki`、`山﨑丈`、`山崎丈` などを維持する。トップはindex, follow, nosnippet, max-image-preview:largeとし、紹介文のmeta description・構造化データdescriptionは置かない。about・contactはindex, follow, max-image-preview:largeとし、サイトマップにも掲載する。旧jp HTMLは削除し、旧URLを404とする。旧URLからの転送ページを再作成しない。作品画像・本文・画質は維持する。検索順位・Google側の更新時期・画像の枚数は保証しない。過去の経歴・プロフィール写真などの記述を現在の実装へ戻さない。
 
 ## 基本方針
 
