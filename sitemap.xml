@@ -2,6 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://joyamazaki.com/</loc>
+    <lastmod>2026-10-29</lastmod>
     <image:image>
       <image:loc>https://joyamazaki.com/works/graduation-01.webp</image:loc>
     </image:image>
@@ -29,6 +30,7 @@
   </url>
   <url>
     <loc>https://joyamazaki.com/about/</loc>
+    <lastmod>2026-10-29</lastmod>
   </url>
   <url>
     <loc>https://joyamazaki.com/contact/</loc>
