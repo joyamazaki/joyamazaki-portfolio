@@ -4,7 +4,7 @@
 
 ## 現在の検索運用方針
 
-検索設定の監査結果・運用手順は `docs/search-policy.md` を参照する。名前検索の入口は `https://joyamazaki.com/` とし、サイト名は `joyamazaki`、HTMLのtitle（Safariなどのタブ名）は `joyamazaki`、og:title・twitter:title・ページ構造化データの名前は `Jo Yamazaki`、説明文は `Designer 2023 - Musashino Art University Department of Industrial, Interior and Craft Design` とする。文章スニペットと作品画像のプレビューを許可する。aboutとcontactも検索対象にする。トップを主な入口として整えつつ、aboutとcontactからの検索流入も許可する。検索対象ページに統一する旧URLは転送とcanonicalで揃える。検索順位・Googleのタイトル・画像の枚数は保証しない。古い日英切り替え・portfolio・プロフィール写真などの記述は、現在の実装やユーザーの最新指示に戻して適用しない。
+検索設定の監査結果・運用手順は `docs/search-policy.md` を参照する。2026-10-29の最新指示を優先する。名前検索の入口は `https://joyamazaki.com/`、サイト名・HTML title・og:title・twitter:titleは `joyamazaki`。Personの名前と別表記は `Jo Yamazaki`、`山﨑丈`、`山崎丈` などを維持する。トップはindex, follow, nosnippet, max-image-preview:largeとし、紹介文のmeta description・構造化データdescriptionは置かない。about・contactはnoindex, follow, nosnippetとし、サイトマップから除外する。旧jp URLは固定の正規URLへhead内のlocation.replaceで直ちに転送し、0秒meta refreshを代替手段として維持する。通常の表示に中継リンクを出さず、JavaScript無効時のみnoscriptリンクを出す。作品画像・本文・画質は維持する。検索順位・Google側の更新時期・画像の枚数は保証しない。過去の経歴・プロフィール写真などの記述を現在の実装へ戻さない。
 
 ## 基本方針
 

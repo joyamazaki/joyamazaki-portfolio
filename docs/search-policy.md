@@ -1,32 +1,31 @@
 # joyamazaki.com：現在の検索運用方針
 
-2026-10-26更新。利用者の最新指示を優先する。
+2026-10-29更新。利用者の最新指示を優先する。
 
-## 検索結果の希望
-- サイト名：joyamazaki。WebSite構造化データとog:site_nameで指定する。
-- Safariなどのタブ名を戻す最新指示により、HTMLのtitleはjoyamazaki。og:title、twitter:title、ページ構造化データはJo Yamazakiを維持する。Google検索タイトルにもHTMLのtitleが使われるため、検索だけ別名になる保証はない。
-- 説明文：Designer 2023 - Musashino Art University Department of Industrial, Interior and Craft Design
-- 以前の文章スニペット非表示方針を撤回し、nosnippetを解除する。
-- 検索タイトル、説明文、サイト名、画像表示と順位の最終判断はGoogleに委ねられる。即時反映や指定どおりの表示を保証しない。
+## 現在の設定
+- 名前検索の入口は https://joyamazaki.com/ 。トップは200応答と自己canonicalを維持。
+- サイト名、HTML title、og:title、twitter:titleはjoyamazaki。PersonのJo Yamazakiと日本語別表記は維持し、ロゴの代替テキストにも人名を明記する。
+- トップはindex, follow, nosnippet, max-image-preview:large。古い経歴を含む文章スニペットを抑制するためnosnippetを指定し、トップの説明文metaとCollectionPage.descriptionを削除。作品画像の設定を維持する。Google側の再クロール前には旧表示が残り得る。
+- about・contactはnoindex, follow, nosnippet。サイトマップにはトップと4作品のみを掲載。robots.txtでクロールを禁止せず、noindexを取得可能にする。公開ページの本文は維持する。
+- 旧jp URLは固定の対応する正規URLへhead内のlocation.replaceで即時転送し、クエリとハッシュを引き継ぐ。0秒meta refreshとcanonicalを代替手段として維持。通常は中継リンクを描画せず、JavaScript無効時だけnoscriptリンクを表示する。背景色はサイトと合わせる。about・contactに対応する旧URLもnoindexにする。
+- GitHub Pagesの静的HTML内でHTTP 301を設定することはできないため、旧jp転送はクライアント側のまま。サーバー側転送に変える場合はホスティング等の別対応が必要。
+- 4作品の自己canonical・画像・PDF・本文・画質は維持する。全ての編集元HTMLとdistミラーを同期する。
+- 毎週木曜の自動確認は利用者の指示により解除済み。
 
-## 検索対象
-- トップ、about、contact、4作品はすべてindex, follow, max-image-preview:large。
-- sitemap.xmlは上記7正規URLとトップの4作品画像を掲載する。
-- 旧jpページは英語正規URLへ0秒転送し、canonicalを維持する。noindexを併用しない。
-- Personの氏名と日本語別表記は維持する。サイトは英語のみ。本文・ロゴ・アニメーションは今回変更しない。
-- 編集元とdistを同期する。
+## Search Consoleで残る確認
+1. トップとabout・contactをURL検査し、公開URLテストで最新のrobots設定を確認する。トップと変更対象を一度再クロール申請する。
+2. Google選択canonical、最終クロール、旧jp URLの集約を確認する。ARCHXがHWKへ重複判定されていた問題の解消は公開HTMLだけでは確認できない。
+3. 山﨑丈・山崎丈・Jo Yamazaki・joyamazakiの表示回数と表示ページを確認する。公開検索の不検出だけでインデックス未登録とは断定しない。
+4. about・contactの一時削除申請は今回の非表示方針と整合する。トップを含む広いプレフィックスの削除申請がないか範囲を確認する。
+5. 修正と検索結果への反映は別であり、順位、Googleのタイトル、画像枚数、更新日数は保証しない。この作業ではSearch Consoleの認証済み情報へアクセスしておらず、再クロール申請も未実施。
 
-## Search Consoleで本人が行うこと
-1. aboutとcontactの一時非表示申請をキャンセルする。旧jp URLや広いプレフィックスの申請も対象範囲を確認する。
-2. 公開後、トップ・about・contactをURL検査し、公開URLをテストしてインデックス登録を一度リクエストする。繰り返し申請してもクロールは速くならない。
-3. sitemap.xmlの正常処理を確認する。成功していれば連続再送信しない。
-4. 最終クロール日時、Googleが選んだ正規URL、名前4表記の表示回数・表示ページを週単位で観察する。
-5. 取得HTMLと検索結果の反映は別々に確認する。Search Consoleの私有データはこのチャットから直接確認できない。
+## 検証
+- HTML構文の読み取り、構造化データJSON、全正規ページのcanonical、robots、サイトマップ、旧URLの転送先・クエリとハッシュ保持、dist同期、JavaScript構文、git diff --checkを確認する。
+- 公開後にHTTP応答と配信HTMLを確認する。Googleの検索結果更新とSearch Consoleの私有データは別途確認が必要。
 
 ## 公式資料
-- https://developers.google.com/search/docs/appearance/site-names
-- https://developers.google.com/search/docs/appearance/title-link
-- https://developers.google.com/search/docs/appearance/snippet
+- https://developers.google.com/search/docs/crawling-indexing/robots-meta-tag
+- https://developers.google.com/search/docs/crawling-indexing/301-redirects
 - https://developers.google.com/search/docs/crawling-indexing/ask-google-to-recrawl
 
 ## 2026-10-27：作品ページの重複対策
