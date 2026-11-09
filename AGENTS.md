@@ -1,4 +1,4 @@
-<!-- 2026-11-02 最新指示（以前の説明文指定より優先）：全7正規ページのdescription・og:description・twitter:descriptionとページ構造化データのdescriptionは「2023-武蔵野美術大学 工芸工業デザイン学科/Musashino Art University Department of Industrial, Interior and Craft Design」。検索説明文の先頭に氏名を重複させない。About本文の氏名のみspanのdata-nosnippetでスニペット対象から除外する。本文の表示内容、既存のtitle・og:title・twitter:title、WebSite.nameとog:site_nameは維持する。サイトリンクはGoogleの自動判断で、表示を保証しない。 -->
+<!-- 2026-11-10 最新指示（以前の説明文指定より優先）：全7正規ページのdescription・og:description・twitter:descriptionとページ構造化データのdescriptionは「山﨑 丈 / Jo Yamazaki - Designer based in Japan」。About本文の氏名と経歴はdata-nosnippetでスニペット対象から除外する。4作品の概要は、読み上げ用のHTML本文とCreativeWorkのdescriptionに作品ごとに記載する。本文の表示内容、既存のtitle・og:title・twitter:title、WebSite.nameとog:site_nameは維持する。サイトリンクはGoogleの自動判断で、表示を保証しない。 -->
 
 <!-- 2026-10-29 最新指示：作品ページは既存4096px WebP画像のみで表示。公開PDF5件とPDF.js起動用portfolio.jsは編集元・distから削除。原本5件はjoyamazaki_pdf_originals_20261029.zipへバイト一致検証のうえ保管済み。PDF公開を復活させない。サイトリンク希望はaboutとARCHX/PERCENTZ/HWK/BELULU。4作品のtitleは作品名のみ。about titleは山﨑 丈 / Jo Yamazakiを維持。サイトリンクの表示・名称・順番はGoogle判断。 -->
 
@@ -10,7 +10,7 @@
 
 ## 現在の検索運用方針
 
-検索設定の監査結果・運用手順は `docs/search-policy.md` を参照する。名前検索の入口は `https://joyamazaki.com/` とし、サイト名は `joyamazaki`、HTMLのtitle（Safariなどのタブ名）は `joyamazaki`、og:title・twitter:title・ページ構造化データの名前は `Jo Yamazaki`、説明文は `Designer 2023 - Musashino Art University Department of Industrial, Interior and Craft Design` とする。文章スニペットと作品画像のプレビューを許可する。aboutとcontactも検索対象にする。トップを主な入口として整えつつ、aboutとcontactからの検索流入も許可する。検索対象ページに統一する旧URLは転送とcanonicalで揃える。検索順位・Googleのタイトル・画像の枚数は保証しない。古い日英切り替え・portfolio・プロフィール写真などの記述は、現在の実装やユーザーの最新指示に戻して適用しない。
+検索設定の監査結果・運用手順は `docs/search-policy.md` を参照する。名前検索の入口は `https://joyamazaki.com/` とし、サイト名は `joyamazaki`、HTMLのtitle（Safariなどのタブ名）は `joyamazaki`、og:title・twitter:title・ページ構造化データの名前は `Jo Yamazaki`、説明文は `山﨑 丈 / Jo Yamazaki - Designer based in Japan` とする。文章スニペットと作品画像のプレビューを許可する。aboutとcontactも検索対象にする。トップを主な入口として整えつつ、aboutとcontactからの検索流入も許可する。検索対象ページに統一する旧URLは転送とcanonicalで揃える。検索順位・Googleのタイトル・画像の枚数は保証しない。古い日英切り替え・portfolio・プロフィール写真などの記述は、現在の実装やユーザーの最新指示に戻して適用しない。
 
 ## 基本方針
 

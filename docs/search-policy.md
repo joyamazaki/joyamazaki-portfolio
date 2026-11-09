@@ -1,4 +1,4 @@
-<!-- 2026-11-02 最新指示（以前の説明文指定より優先）：全7正規ページのdescription・og:description・twitter:descriptionとページ構造化データのdescriptionは「2023-武蔵野美術大学 工芸工業デザイン学科/Musashino Art University Department of Industrial, Interior and Craft Design」。検索説明文の先頭に氏名を重複させない。About本文の氏名のみspanのdata-nosnippetでスニペット対象から除外する。本文の表示内容、既存のtitle・og:title・twitter:title、WebSite.nameとog:site_nameは維持する。サイトリンクはGoogleの自動判断で、表示を保証しない。 -->
+<!-- 2026-11-10 最新指示（以前の説明文指定より優先）：全7正規ページのdescription・og:description・twitter:descriptionとページ構造化データのdescriptionは「山﨑 丈 / Jo Yamazaki - Designer based in Japan」。About本文の氏名と経歴はdata-nosnippetでスニペット対象から除外する。4作品の概要は、読み上げ用のHTML本文とCreativeWorkのdescriptionに作品ごとに記載する。本文の表示内容、既存のtitle・og:title・twitter:title、WebSite.nameとog:site_nameは維持する。サイトリンクはGoogleの自動判断で、表示を保証しない。 -->
 
 <!-- 2026-10-29 最新指示：作品ページは既存4096px WebP画像のみで表示。公開PDF5件とPDF.js起動用portfolio.jsは編集元・distから削除。原本5件はjoyamazaki_pdf_originals_20261029.zipへバイト一致検証のうえ保管済み。PDF公開を復活させない。サイトリンク希望はaboutとARCHX/PERCENTZ/HWK/BELULU。4作品のtitleは作品名のみ。about titleは山﨑 丈 / Jo Yamazakiを維持。サイトリンクの表示・名称・順番はGoogle判断。 -->
 
@@ -11,7 +11,7 @@
 ## 検索結果の希望
 - サイト名：joyamazaki。WebSite構造化データとog:site_nameで指定する。
 - Safariなどのタブ名を戻す最新指示により、HTMLのtitleはjoyamazaki。og:title、twitter:title、ページ構造化データはJo Yamazakiを維持する。Google検索タイトルにもHTMLのtitleが使われるため、検索だけ別名になる保証はない。
-- 説明文：Designer 2023 - Musashino Art University Department of Industrial, Interior and Craft Design
+- 説明文：山﨑 丈 / Jo Yamazaki - Designer based in Japan
 - 以前の文章スニペット非表示方針を撤回し、nosnippetを解除する。
 - 検索タイトル、説明文、サイト名、画像表示と順位の最終判断はGoogleに委ねられる。即時反映や指定どおりの表示を保証しない。
 
